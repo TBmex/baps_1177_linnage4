@@ -16,7 +16,7 @@ snp.matrix <- load_fasta(fasta.file.name)
 #To run hierBAPS with 2 levels and 20 initial clusters we run
 hb.results <- hierBAPS(snp.matrix, n.cores = 8, max.depth = 10, n.pops = 100, quiet = TRUE)
 head(hb.results$partition.df)
-      
+          
 #Save
 write.csv(hb.results$partition.df, "hierbaps_partition_1177_l4.csv", row.names = FALSE)
 save_lml_logs(hb.results, "hierbaps_logML_1177_l4.txt")

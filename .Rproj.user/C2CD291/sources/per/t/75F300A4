@@ -2,18 +2,18 @@
     "collab_server" : "",
     "contents" : "",
     "created" : 1606468142587.000,
-    "dirty" : true,
+    "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "3227597670",
     "id" : "75F300A4",
-    "lastKnownWriteTime" : 1606133342,
-    "last_content_update" : 1606470794384,
+    "lastKnownWriteTime" : 1606472319,
+    "last_content_update" : 1606472319178,
     "path" : "~/Baps/baps_1177_linnage4/baps_1277_02.R",
     "project_path" : "baps_1277_02.R",
     "properties" : {
-        "cursorPosition" : "18,19",
-        "scrollLine" : "2"
+        "cursorPosition" : "6,14",
+        "scrollLine" : "0"
     },
     "read_only" : false,
     "read_only_alternatives" : [
