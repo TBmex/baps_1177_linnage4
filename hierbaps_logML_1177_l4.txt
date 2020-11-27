@@ -1,0 +1,30 @@
+Depth 0 
+cluster names:	 1 
+cluster log marginal likelihood:	 -1400716.39172081 
+Depth 1 
+cluster names:	 1 
+cluster log marginal likelihood:	 -1400716.39172081 
+Depth 2 
+cluster names:	 1 
+cluster log marginal likelihood:	 -1400716.39172081 
+Depth 3 
+cluster names:	 1 
+cluster log marginal likelihood:	 -1400716.39172081 
+Depth 4 
+cluster names:	 1 
+cluster log marginal likelihood:	 -1400716.39172081 
+Depth 5 
+cluster names:	 1 
+cluster log marginal likelihood:	 -1400716.39172081 
+Depth 6 
+cluster names:	 1 
+cluster log marginal likelihood:	 -1400716.39172081 
+Depth 7 
+cluster names:	 1 
+cluster log marginal likelihood:	 -1400716.39172081 
+Depth 8 
+cluster names:	 1 
+cluster log marginal likelihood:	 -1400716.39172081 
+Depth 9 
+cluster names:	 1 
+cluster log marginal likelihood:	 -1400716.39172081 
