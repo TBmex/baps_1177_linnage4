@@ -17,3 +17,5 @@ hb.results <- hierBAPS(snp.matrix, n.cores = 8, max.depth = 10, n.pops = 100, qu
 6   G1002       1       1       1       1       1       1       1       1       1        1
 ~~~
 ![Alt text](https://github.com/TBmex/baps_1177_linnage4/blob/master/Rplot_lvl4_not_pops.jpeg)
+
+## **El alineamiento al parecer estaba mal copiado, copia siempre desde el servidor** 
