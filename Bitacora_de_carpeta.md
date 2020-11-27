@@ -16,4 +16,4 @@ hb.results <- hierBAPS(snp.matrix, n.cores = 8, max.depth = 10, n.pops = 100, qu
 5   G1000       1       1       1       1       1       1       1       1       1        1
 6   G1002       1       1       1       1       1       1       1       1       1        1
 ~~~
-![Alt text]()
+![Alt text](https://github.com/TBmex/baps_1177_linnage4/blob/master/Rplot_lvl4_not_pops.jpeg)
