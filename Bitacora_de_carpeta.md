@@ -17,6 +17,3 @@ hb.results <- hierBAPS(snp.matrix, n.cores = 8, max.depth = 10, n.pops = 100, qu
 6   G1002       1       1       1       1       1       1       1       1       1        1
 ~~~
 ![Alt text](https://github.com/TBmex/baps_1177_linnage4/blob/master/Rplot_lvl4_not_pops.jpeg)
-
-![](assets/Bitacora_de_carpeta-8d6af574.png)
-![](assets/Bitacora_de_carpeta-ceea94ec.png)
