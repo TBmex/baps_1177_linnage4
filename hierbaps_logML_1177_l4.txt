@@ -22,9 +22,3 @@ cluster log marginal likelihood:	 -1400716.39172081
 Depth 7 
 cluster names:	 1 
 cluster log marginal likelihood:	 -1400716.39172081 
-Depth 8 
-cluster names:	 1 
-cluster log marginal likelihood:	 -1400716.39172081 
-Depth 9 
-cluster names:	 1 
-cluster log marginal likelihood:	 -1400716.39172081 

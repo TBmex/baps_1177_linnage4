@@ -18,4 +18,22 @@ hb.results <- hierBAPS(snp.matrix, n.cores = 8, max.depth = 10, n.pops = 100, qu
 ~~~
 ![Alt text](https://github.com/TBmex/baps_1177_linnage4/blob/master/Rplot_lvl4_not_pops.jpeg)
 
-## **El alineamiento al parecer estaba mal copiado, copia siempre desde el servidor** 
+## **El alineamiento al parecer estaba mal copiado, copia siempre desde el servidor**
+- Realizamos una nueva corrida con los siguientes parametros, copiando el alineamiento desde el sevidor.
+~~~
+hb.results <- hierBAPS(snp.matrix, n.cores = 6, max.depth = 8, n.pops = 100, quiet = TRUE)
+~~~
+- Mismo reusultado
+~~~
+> head(hb.results$partition.df)
+  Isolate level 1 level 2 level 3 level 4 level 5 level 6 level 7 level 8
+1     G01       1       1       1       1       1       1       1       1
+2     G02       1       1       1       1       1       1       1       1
+3     G03       1       1       1       1       1       1       1       1
+4     G04       1       1       1       1       1       1       1       1
+5   G1000       1       1       1       1       1       1       1       1
+6   G1002       1       1       1       1       1       1       1       1
+~~~
+- **Hay un detalle en el alineamiento que no no estoy observando**
+- Repetimos alineamiento y corremos de nuevo.
+- Tienes que descartar la posibilidad de que el root en el iqtree te genere problemas.
