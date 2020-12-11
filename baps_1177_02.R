@@ -7,7 +7,7 @@ library(ape)
 set.seed(1234)
 
 #Plotting results
-newick.file.name <- "run_alignment_no_resis.fas.treefile"
+newick.file.name <- "run_alignment_no_resis_1177.fas.treefile"
 iqtree_1177 <- phytools::read.newick(newick.file.name)
 
 baps_1177 <- read.csv("hierbaps_partition_1177_l4.csv", sep = ",", header = T)
