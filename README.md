@@ -58,8 +58,9 @@ hb.results <- hierBAPS(snp.matrix, n.cores = 6, max.depth = 8, quiet = TRUE)
 5   G1000       1       2       7      20       9       7       5       5
 6   G1002       2       5      12      23      13      11       7       6
 ~~~
-Arbol:
-![](assets/README-55f3c11c.jpeg)
+Arbol lvl1 to 8:
+
+![](assets/README-a53cd1f4)![](assets/README-2c0ec8c6)![](assets/README-7682f812)![](assets/README-1f381fe1)![](assets/README-001ddcb9)![](assets/README-9a8a3807)![](assets/README-cdcf3aeb)![](assets/README-449bb773) 
 
 - Resultados del servidor: Sigue corriendo despues de dos dias??
 - Tiene algo que ver el **max.depth = 2**?

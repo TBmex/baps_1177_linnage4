@@ -18,14 +18,14 @@ baps_1177$level.2 <- as.double(baps_1177$level.2)
 #A simple coloured tree allows us to see the top level cluster assignment from hierBAPS.
 gg <- ggtree(iqtree_1177, layout = "circular")
 gg_1177 <- gg %<+% baps_1177
-gg_1177 <- gg_1177 + geom_tippoint(aes(color = factor(level.4)))
+gg_1177 <- gg_1177 + geom_tippoint(aes(color = factor(level.7)))
 gg_1177
 
-gg <- ggtree(iqtree_1277, layout = "circular", branch.length = "none")
-gg_1277 <- gg %<+% baps_1277
-gg_1277 <- gg_1277 + geom_tippoint(aes(color = factor(level.2)))
-gg_1277 <- gg_1277 + theme(legend.position = "right")
-gg_1277 <- gg_1277 + geom_tiplab(aes(label = level.2), size = 1, offset = 1)
-gg_1277
+gg <- ggtree(iqtree_1177, layout = "circular", branch.length = "none")
+gg_1177 <- gg %<+% baps_1177
+gg_1177 <- gg_1177 + geom_tippoint(aes(color = factor(level.2)))
+gg_1177 <- gg_1177 + theme(legend.position = "right")
+gg_1177 <- gg_1177 + geom_tiplab(aes(label = level.2), size = 1, offset = 1)
+gg_1177
 
-plot_sub_cluster(hb.results, iqtree_1277, level = 1, sub.cluster = 1)
+plot_sub_cluster(hb.results, iqtree_1177, level = 3, sub.cluster = 1)
