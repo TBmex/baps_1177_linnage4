@@ -60,7 +60,7 @@ hb.results <- hierBAPS(snp.matrix, n.cores = 6, max.depth = 8, quiet = TRUE)
 ~~~
 Arbol lvl1 to 8:
 
-![](assets/README-a53cd1f4)![](assets/README-2c0ec8c6)![](assets/README-7682f812)![](assets/README-1f381fe1)![](assets/README-001ddcb9)![](assets/README-9a8a3807)![](assets/README-cdcf3aeb)![](assets/README-449bb773) 
+![](assets/README-a53cd1f4)![](assets/README-2c0ec8c6)![](assets/README-7682f812)![](assets/README-1f381fe1)![](assets/README-001ddcb9)![](assets/README-9a8a3807)![](assets/README-cdcf3aeb)![](assets/README-449bb773)
 
 - Resultados del servidor: Sigue corriendo despues de dos dias??
 - Tiene algo que ver el **max.depth = 2**?
@@ -72,6 +72,8 @@ hb.results <- hierBAPS(snp.matrix, n.cores = 16, max.depth = 2, quiet = TRUE)
 
 3. Consideramos FastBaps? En proceso.
 
+## Logramas poner en el mismo arbol Españoles/Bapslvl4/Clusters10snp
 
+Link: https://itol.embl.de/tree/1611112193617711606319950#
 
-- *Descartar la posibilidad de que el root en el iqtree te genere problemas.*
+-Obteniendo concluisones...
