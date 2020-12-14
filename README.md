@@ -63,9 +63,12 @@ Arbol lvl1 to 8:
 ![](assets/README-a53cd1f4)![](assets/README-2c0ec8c6)![](assets/README-7682f812)![](assets/README-1f381fe1)![](assets/README-001ddcb9)![](assets/README-9a8a3807)![](assets/README-cdcf3aeb)![](assets/README-449bb773)
 
 - Resultados del servidor: Sigue corriendo despues de dos dias??
-- Tiene algo que ver el **max.depth = 2**?
+- Tiene algo que ver el **max.depth = 2**? **No tiene que ver**
+- Segunda prueba sigue corriendo despues de 2 dias **Algo pasa en el sv**
 ~~~
 hb.results <- hierBAPS(snp.matrix, n.cores = 16, max.depth = 2, quiet = TRUE)
+
+hb.results <- hierBAPS(snp.matrix, n.cores = 12, max.depth = 8, quiet = TRUE)
 ~~~
 
 ![](assets/README-d2210609.png)
@@ -76,4 +79,4 @@ hb.results <- hierBAPS(snp.matrix, n.cores = 16, max.depth = 2, quiet = TRUE)
 
 Link: https://itol.embl.de/tree/1611112193617711606319950#
 
--Obteniendo concluisones...
+-Obteniendo concluisones... 
