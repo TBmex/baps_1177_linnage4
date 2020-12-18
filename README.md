@@ -16,6 +16,7 @@ hb.results <- hierBAPS(snp.matrix, n.cores = 8, max.depth = 10, n.pops = 100, qu
 5   G1000       1       1       1       1       1       1       1       1       1        1
 6   G1002       1       1       1       1       1       1       1       1       1        1
 ~~~
+
 ![Alt text](https://github.com/TBmex/baps_1177_linnage4/blob/master/Rplot_lvl4_not_pops.jpeg)
 
 ### El alineamiento al parecer estaba mal copiado, copia siempre desde el servidor
@@ -79,4 +80,4 @@ hb.results <- hierBAPS(snp.matrix, n.cores = 12, max.depth = 8, quiet = TRUE)
 
 Link: https://itol.embl.de/tree/1611112193617711606319950#
 
--Obteniendo concluisones... 
+-Cerramos aqui el tema, abro nuevo archivo llamado "Datalles.md", donde planteo nuevas cosas por hacer.
