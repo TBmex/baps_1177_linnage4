@@ -75,6 +75,7 @@ hb.results <- hierBAPS(snp.matrix, n.cores = 12, max.depth = 8, quiet = TRUE)
 ![](assets/README-d2210609.png)
 
 3. Consideramos FastBaps? En proceso.
+- Funciono.
 
 ## Logramas poner en el mismo arbol Españoles/Bapslvl3/Clusters10snp
 
@@ -87,18 +88,23 @@ Link: https://itol.embl.de/tree/16111121936428041608308653
 1. Jugar con el arbol retirando la raiz
 - No debia interferir y no interfiere.
 https://itol.embl.de/tree/16111121936433581608305070
-
 2. Dejar solo una muestra por cluster
 - Por cluster o por cluster español?
-
 3. Revisar si el baps esta agrupando los clusters
 - El baps esta agrupando clusters de manera correcta, solo cuando se baja la profundidad (lvls) demasiado cambia.
 - Fastbaps y rhierbaps agrupan de manera correcta los clusters.
-
 4. Realizar con FastBaps
 - Resultados similares al rhierbaps.
-
 5. Hay algo con mi alineamiento que este mal? Puffffffffffffff Por que separa los genotipos?
 - Los separa por que son genotipos, no deben forzosamente estar juntos en la filogenia.
 - El resultado no debe ser exacto al tu representacion de linajes y clusters es un experimento.
 - Se detectan genotipos; no linajes, ni clusters.
+
+### Resumen / Actualización
+
+- Trabajamos solo con el linaje 4
+- Detectamos genotipos a varios lvls con basp y fastbaps, elegimos el nivel 3 de ambos para buscar asociaciones.
+-Arbol actual: https://itol.embl.de/tree/16111121936428041608308653
+
+- Construyendo tablas de asociaciones :)
+- Tenemos las tablas :)
