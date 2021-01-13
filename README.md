@@ -68,7 +68,6 @@ Arbol lvl1 to 8:
 - Segunda prueba sigue corriendo despues de 2 dias **Algo pasa en el sv**
 ~~~
 hb.results <- hierBAPS(snp.matrix, n.cores = 16, max.depth = 2, quiet = TRUE)
-
 hb.results <- hierBAPS(snp.matrix, n.cores = 12, max.depth = 8, quiet = TRUE)
 ~~~
 
@@ -77,13 +76,12 @@ hb.results <- hierBAPS(snp.matrix, n.cores = 12, max.depth = 8, quiet = TRUE)
 3. Consideramos FastBaps? En proceso.
 - Funciono.
 
-## Logramas poner en el mismo arbol Españoles/Bapslvl3/Clusters10snp
+### Logramos poner en el mismo arbol Españoles/Bapslvl3/Clusters10snp
 
 Link: https://itol.embl.de/tree/16111121936428041608308653
-
 -Cerramos aqui el tema y planteo nuevas cosas por hacer.
 
-## Nuevos planteos
+### Nuevos planteos
 
 1. Jugar con el arbol retirando la raiz
 - No debia interferir y no interfiere.
@@ -103,8 +101,60 @@ https://itol.embl.de/tree/16111121936433581608305070
 ### Resumen / Actualización
 
 - Trabajamos solo con el linaje 4
-- Detectamos genotipos a varios lvls con basp y fastbaps, elegimos el nivel 3 de ambos para buscar asociaciones.
--Arbol actual: https://itol.embl.de/tree/16111121936428041608308653
+- Detectamos genotipos a varios lvls con basp y fastbaps, elegimos el nivel 3 de ambos para buscar asociaciones. El lvl 2 da muy pocos genotipos (15 -16) y el lvl 4 da demasiados (100 o mas).
+- Arbol actual: https://itol.embl.de/tree/16111121936428041608308653
 
-- Construyendo tablas de asociaciones :)
-- Tenemos las tablas :)
+### Realizar tablas descriptivas e histogramas de los datos (subcarpeta: Merge de arbol 1177)
+
+Distribucion Bapslvl3 (x=genotipos, y=numero de aislados)
+![](assets/README-08007cf2.jpeg)
+~~~
+        factorx Freq cumFreq   relative
+1  (0.945,5.58]   38      38 0.03228547
+2   (5.58,10.2]  301     339 0.25573492
+3   (10.2,14.8]  106     445 0.09005947
+4   (14.8,19.3]  100     545 0.08496177
+5   (19.3,23.9]  195     740 0.16567545
+6   (23.9,28.5]  193     933 0.16397621
+7   (28.5,33.1]   45     978 0.03823280
+8   (33.1,37.7]   56    1034 0.04757859
+9   (37.7,42.2]   40    1074 0.03398471
+10  (42.2,46.8]   21    1095 0.01784197
+11  (46.8,51.4]   47    1142 0.03993203
+12  (51.4,56.1]   35    1177 0.02973662
+~~~
+
+Distribucion FastBapslvl3 (x=genotipos, y=numero de aislados)
+![](assets/README-1000d7cb.jpeg)
+
+~~~
+       factorx Freq cumFreq   relative
+1  (0.948,5.33]  258     258 0.21920136
+2   (5.33,9.67]  135     393 0.11469839
+3     (9.67,14]  127     520 0.10790144
+4     (14,18.3]  100     620 0.08496177
+5   (18.3,22.7]   69     689 0.05862362
+6     (22.7,27]  128     817 0.10875106
+7     (27,31.3]   99     916 0.08411215
+8   (31.3,35.7]  141    1057 0.11979609
+9     (35.7,40]   18    1075 0.01529312
+10    (40,44.3]   23    1098 0.01954121
+11  (44.3,48.7]   49    1147 0.04163127
+12  (48.7,53.1]   30    1177 0.02548853
+~~~
+
+- Generemos tabla con genotipos/ numero de aislados/ españoles/ en cluster 10 snps
+
+- Realizamos varios merges y obtuvimos varias tablas usando el archivo: "Frecuencias_e_histogramas.R", este archivo tiene anotaciones interesantes para realizar los merges.
+
+![](assets/README-927554de.png)
+
+En esta tabla (datos:bapslvl3) y en la tabla Filtramos:
+ - Genotipos con mas de 15 aislados
+ - Porcentaje de españoles > 75 %
+
+Pensar que prosigue, ideas:
+
+- Repetir lo mismo como fastbaps
+- Agregar datos de Clusters10snp en conjunto con el Arbol
+- Sacar ORs :)
