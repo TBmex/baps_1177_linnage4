@@ -106,7 +106,7 @@ https://itol.embl.de/tree/16111121936433581608305070
 
 ### Realizar tablas descriptivas e histogramas de los datos (subcarpeta: Merge de arbol 1177)
 
-Distribucion Bapslvl3 (x=genotipos, y=numero de aislados)
+##### Distribucion Bapslvl3 (x=genotipos, y=numero de aislados)
 ![](assets/README-08007cf2.jpeg)
 ~~~
         factorx Freq cumFreq   relative
@@ -124,7 +124,7 @@ Distribucion Bapslvl3 (x=genotipos, y=numero de aislados)
 12  (51.4,56.1]   35    1177 0.02973662
 ~~~
 
-Distribucion FastBapslvl3 (x=genotipos, y=numero de aislados)
+##### Distribucion FastBapslvl3 (x=genotipos, y=numero de aislados)
 ![](assets/README-1000d7cb.jpeg)
 
 ~~~
@@ -143,7 +143,7 @@ Distribucion FastBapslvl3 (x=genotipos, y=numero de aislados)
 12  (48.7,53.1]   30    1177 0.02548853
 ~~~
 
-- Generemos tabla con genotipos/ numero de aislados/ españoles/ en cluster 10 snps
+##### Generemos tabla con genotipos/ numero de aislados/ españoles/ en cluster 10 snps
 
 - Realizamos varios merges y obtuvimos varias tablas usando el archivo: "Frecuencias_e_histogramas.R", este archivo tiene anotaciones interesantes para realizar los merges.
 
@@ -153,8 +153,10 @@ En esta tabla (datos:bapslvl3) y en la tabla Filtramos:
  - Genotipos con mas de 15 aislados
  - Porcentaje de españoles > 75 %
 
-Pensar que prosigue, ideas:
+#### Pensar que prosigue, ideas:
 
 - Repetir lo mismo como fastbaps
 - Agregar datos de Clusters10snp en conjunto con el Arbol
 - Sacar ORs :)
+
+### Vamos!!!!!
