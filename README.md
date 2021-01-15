@@ -159,6 +159,6 @@ En esta tabla (datos:bapslvl3) y en la tabla Filtramos:
 - Agregar datos de Clusters10snp en conjunto con el Arbol
 - Sacar ORs :)
 
-- Podemos hacer lo mismo con FastBapslvl3 y con lvl2 te va?
+Read: Whole Genome Sequencing and Spatial Analysis Identifies Recent Tuberculosis Transmission Hotspots in Ghana
 
 ### Vamos!!!!!
