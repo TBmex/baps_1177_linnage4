@@ -20,3 +20,6 @@ cbind( Freq=table(x))
 
 # generate histogram
 hist(x, breaks = "Sturges")
+
+cluster_bapslvl3 <-merge (bapslvl3, lista_itolcolors_10, by = "ID", all.x=TRUE)
+cluster_fastbapslvl3 <-merge (fastbapslvl3, lista_itolcolors_10, by = "ID", all.x=TRUE)

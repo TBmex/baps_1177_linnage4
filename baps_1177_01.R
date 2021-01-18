@@ -18,5 +18,5 @@ hb.results <- hierBAPS(snp.matrix, n.cores = 6, max.depth = 8, quiet = TRUE)
 head(hb.results$partition.df)
 
 #Save
-write.csv(hb.results$partition.df, "hierbaps_partition_1177_l4.csv", row.names = FALSE)
-save_lml_logs(hb.results, "hierbaps_logML_1177_l4.txt")
+#write.csv(hb.results$partition.df, "hierbaps_partition_1177_l4.csv", row.names = FALSE)
+#save_lml_logs(hb.results, "hierbaps_logML_1177_l4.txt")

@@ -73,27 +73,30 @@ hb.results <- hierBAPS(snp.matrix, n.cores = 12, max.depth = 8, quiet = TRUE)
 
 ![](assets/README-d2210609.png)
 
-3. Consideramos FastBaps? En proceso.
-- Funciono.
+3. Consideramos FastBaps? En proceso.  
+Funciono.
 
 ### Logramos poner en el mismo arbol Españoles/Bapslvl3/Clusters10snp
 
-Link: https://itol.embl.de/tree/16111121936428041608308653
+Link: https://itol.embl.de/tree/16111121936428041608308653  
 -Cerramos aqui el tema y planteo nuevas cosas por hacer.
 
 ### Nuevos planteos
 
-1. Jugar con el arbol retirando la raiz
-- No debia interferir y no interfiere.
+1. Jugar con el arbol retirando la raiz.  
+No debia interferir y no interfiere.
 https://itol.embl.de/tree/16111121936433581608305070
-2. Dejar solo una muestra por cluster
-- Por cluster o por cluster español?
-3. Revisar si el baps esta agrupando los clusters
-- El baps esta agrupando clusters de manera correcta, solo cuando se baja la profundidad (lvls) demasiado cambia.
-- Fastbaps y rhierbaps agrupan de manera correcta los clusters.
-4. Realizar con FastBaps
-- Resultados similares al rhierbaps.
-5. Hay algo con mi alineamiento que este mal? Puffffffffffffff Por que separa los genotipos?
+
+2. Dejar solo una muestra por cluster  
+Por cluster o por cluster español?
+
+3. Revisar si el baps esta agrupando los clusters  
+Fastbaps y rhierbaps agrupan de manera correcta los clusters.
+
+4. Realizar con FastBaps  
+Resultados similares al rhierbaps.
+
+5. Hay algo con mi alineamiento que este mal? Por que se separan los genotipos?
 - Los separa por que son genotipos, no deben forzosamente estar juntos en la filogenia.
 - El resultado no debe ser exacto al tu representacion de linajes y clusters es un experimento.
 - Se detectan genotipos; no linajes, ni clusters.
@@ -143,22 +146,31 @@ https://itol.embl.de/tree/16111121936433581608305070
 12  (48.7,53.1]   30    1177 0.02548853
 ~~~
 
-##### Generemos tabla con genotipos/ numero de aislados/ españoles/ en cluster 10 snps
+### Generemos tabla con genotipos/ numero de aislados/ españoles/ en cluster 10 snps
 
 - Realizamos varios merges y obtuvimos varias tablas usando el archivo: "Frecuencias_e_histogramas.R", este archivo tiene anotaciones interesantes para realizar los merges.
 
-![](assets/README-927554de.png)
-
 En esta tabla (datos:bapslvl3) y en la tabla Filtramos:
- - Genotipos con mas de 15 aislados
- - Porcentaje de españoles > 75 %
-
-#### Pensar que prosigue, ideas:
-
-- Repetir lo mismo como fastbaps
-- Agregar datos de Clusters10snp en conjunto con el Arbol
-- Sacar ORs :)
+ - Genotipos con mas de 20 aislados
+ - Porcentaje de españoles > 50 %
 
 Read: Whole Genome Sequencing and Spatial Analysis Identifies Recent Tuberculosis Transmission Hotspots in Ghana
 
-### Vamos!!!!!
+### Planteo de Mariana ¿Cambiar la semilla intefiere en los resultados?
+
+- Cambiamos la semilla en el Rhierbaps, el resultado de la tabla de genotipos es identico.  
+El cambio de la semilla no afecta la deteccion de los genotipos.
+
+~~~
+set.seed(1234) -> Original
+set.seed(2345) -> Cambio de semilla
+
+> head(hb.results$partition.df)
+  Isolate level 1 level 2 level 3 level 4 level 5 level 6 level 7 level 8
+1     G01       1       1       1       1       1       1       1       1
+2     G02       1       1       2       5       3       2       2       2
+3     G03       1       2       6       8       4       3       3       3
+4     G04       2       4       9      14       7       5       4       4
+5   G1000       1       2       7      20       9       7       5       5
+6   G1002       2       5      12      23      13      11       7       6
+~~~
