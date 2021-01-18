@@ -150,6 +150,8 @@ Resultados similares al rhierbaps.
 
 - Realizamos varios merges y obtuvimos varias tablas usando el archivo: "Frecuencias_e_histogramas.R", este archivo tiene anotaciones interesantes para realizar los merges.
 
+![](assets/README-2f27baeb.png)
+
 En esta tabla (datos:bapslvl3) y en la tabla Filtramos:
  - Genotipos con mas de 20 aislados
  - Porcentaje de españoles > 50 %
@@ -174,3 +176,5 @@ set.seed(2345) -> Cambio de semilla
 5   G1000       1       2       7      20       9       7       5       5
 6   G1002       2       5      12      23      13      11       7       6
 ~~~
+
+#### Cerramos aqui renombramos este archivo como README2.md
