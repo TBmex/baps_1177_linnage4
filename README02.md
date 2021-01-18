@@ -177,4 +177,4 @@ set.seed(2345) -> Cambio de semilla
 6   G1002       2       5      12      23      13      11       7       6
 ~~~
 
-#### Cerramos aqui renombramos este archivo como README2.md
+### Cerramos aqui renombramos este archivo como README2.md
