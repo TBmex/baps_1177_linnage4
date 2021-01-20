@@ -1,8 +1,7 @@
 # Generar tabla de frecuencias e histogramas
 
 #Data cambiamos variables valor de X dependiendo lo que quiero obtener
-x <- bapslvl3$genotipos_baps
-x <- fastbapslvl3$genotipo_fastbaps
+x <- Fastbaps_lvl2$Genotipo
 # Aqui solo para obtener los aislados genotipo solo españoles.
 x <- coso$genotipos_baps
 x <- coso2$genotipo_fastbaps
