@@ -15,7 +15,14 @@
 
 Lvl3 -> Bapslvl3 : Fastbapslvl3  
 Lvl2 -> Bapslvl2 : Fastbapslvl2  
-**Hecho**
+
+**Detalles de Mariana:**
+> - es necesario agregarle el número de clusters,  
+- el genotipo 7 no es monofiético, de manera que los números habría que revisarlos considerando un grupo monofilético
+-  deberíamos pensar en cuántas mutaciones definen cada grupo
+- otra cosa que estaría bien agregar a la tabla, es el número de casos en cluster (totales: españoles y no españoles) de cada genotipo
+así calculamos el % de transmisión x genotipo y cuanta de esa transmisión involucra españoes
+
 
 ### Correr Baps con solo una muestra por cluster
 
@@ -28,7 +35,8 @@ Lvl2 -> Bapslvl2 : Fastbapslvl2
 ### Extras
 
 - Read: "Whole Genome Sequencing and Spatial Analysis Identifies Recent Tuberculosis Transmission Hotspots in Ghana"
-- Ver: (https://coursesandconferences.wellcomegenomecampus.org/our-events/abphm-2021/?utm_campaign=1868895_Upcoming%20deadlines%20%28Jan%2021%2C%20Feb%2C%20Mar%202021%29&utm_medium=email&utm_source=ACSC&dm_i=2SUU,1421R,UWSD1,4AB5U,1)
+- Ver: https://coursesandconferences.wellcomegenomecampus.org/our-events/abphm-2021/?utm_campaign=1868895_Upcoming%20deadlines%20%28Jan%2021%2C%20Feb%2C%20Mar%202021%29&utm_medium=email&utm_source=ACSC&dm_i=2SUU,1421R,UWSD1,4AB5U,1
+- Ver: https://www.climb.ac.uk/artic-and-climb-big-data-joint-workshop/
 
 ### Cursos y conferencias
 
@@ -38,3 +46,6 @@ Visitar : (https://www.embl.de/training/events/)
 **Conferencias** en:  
 Sociedad española de microbiología  
 Sociedad europea de microbiología
+https://esmycobacteriology.eu/
+
+https://worldmicrobeforum.org/index.php/program/scientific-topics-tracks
