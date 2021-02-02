@@ -49,3 +49,9 @@ Sociedad europea de microbiología
 https://esmycobacteriology.eu/
 
 https://worldmicrobeforum.org/index.php/program/scientific-topics-tracks
+
+https://www.eccmid.org/
+
+Congresos:
+Creo que este es una oportunidad para presentar este trabajo
+https://worldmicrobeforum.org/index.php/program/scientific-topics-tracks (EEB02: Microbial Evolution and Comparative Genomics)

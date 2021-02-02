@@ -1,5 +1,7 @@
 ## Realizar tablas de valores de Rhierbaps & Baps
-  
+## Libreria
+library(dplyr)
+
 # Data cambiamos variables valor de X dependiendo lo que quiero obtener
 x <- Fastbaps_lvl2
 y <- Fastbaps_lvl2$Genotipo
@@ -11,19 +13,45 @@ Freq <- cbind( Freq=table(y))
 # Realizamos merge de Frecuencias con españoles
 ID_Genotipo_Spain <- merge (x, Spain, by = "ID", all.x=TRUE)
 Genotipo_Spain <- ID_Genotipo_Spain [c(2,3)]
-  
+
 # Obtenemos numero de españoles por genotipo
 Freq_spain <- table(Genotipo_Spain)
 Freq_spain <- as.data.frame.matrix (Freq_spain)
   
 # Juntamos frecuencias
-Frecuencias <- cbind.data.frame (Freq, Freq_spain)
-write.csv(Frecuencias, "Frecuencias")
-  
-# Agregamos Cluster (en proceso)
+Frecuencias <- cbind.data.frame (Genotipo = c(1:16), Freq, Freq_spain, NoSpain = c(Freq-Freq_spain))
+Frecuencias <- cbind(Frecuencias, Spain_porcen = c(((Frecuencias$Spain)*1) / (Frecuencias$Freq))*100)
+
+# Frecuencia total de Genotipos en transmicion (cluster)
 ID_Genotipo_Spain_Cluster <- merge (ID_Genotipo_Spain, Clusters_10snps, by = "ID", all.x=TRUE)
+
+# Transmicion total
 Genotipo_Cluster <- ID_Genotipo_Spain_Cluster [c(2,4)]
+Genotipo_Cluster <- cbind(Genotipo_Cluster, In_cluster = c(Genotipo_Cluster$cluster10snps==TRUE))
+Genotipo_incluster <- Genotipo_Cluster [c(1,3)]
+Genotipo_incluster_allfreq <- cbind.data.frame( Freq=table(Genotipo_incluster))
+names(Genotipo_incluster_allfreq) = c("Genotipo", "x", "Transmicion")
+
+Spain_Genotipo_incluster <- filter(ID_Genotipo_Spain_Cluster, Spain == "Spain")
+Spain_Genotipo_incluster <- Spain_Genotipo_incluster[!is.na(Spain_Genotipo_incluster$cluster10snps),]
+Spain_Genotipo_incluster <- cbind(Spain_Genotipo_incluster, In_cluster = c(Spain_Genotipo_incluster$cluster10snps==TRUE))
+Spain_Genotipo_incluster <- Spain_Genotipo_incluster [c(2,5)]
+Spain_Genotipo_incluster <- cbind( Freq=table(Spain_Genotipo_incluster$Genotipo))
+
+# Renombramos columnas y agregamos Españoles en cluster y en no cluster
+Frecuencias <- cbind.data.frame(Frecuencias, Spain_incluster = Spain_Genotipo_incluster)
+names(Frecuencias) = c("Genotipo", "N", "Spain", "No_spain", "Spain_x", "Spain_incluster" )
+Frecuencias <- cbind(Frecuencias, Spain_nocluster = c(Frecuencias$Spain - Frecuencias$Spain_incluster))
+Frecuencias <- cbind(Frecuencias, Spain_incluster_x = c(((Frecuencias$Spain_incluster)*1) / (Frecuencias$Spain))*100)
+
+# Agregamos transmicion
+Frecuencias <- cbind(Frecuencias, Total_incluster = Genotipo_incluster_allfreq$Transmicion)
+Frecuencias <- cbind(Frecuencias, Spain_incluster_xx = c(((Frecuencias$Spain_incluster)*1) / (Frecuencias$Total_incluster))*100)
+Frecuencias <- round (Frecuencias, 2)
+
+# Creamso csvs
+write.csv(Frecuencias, "Frecuencias")
 write.csv(ID_Genotipo_Spain_Cluster, "ID_Genotipo_Spain_Cluster")
-  
+
 # Borramos archivos intermedios
-rm (x, y, Freq, Freq_spain, ID_Genotipo_Spain, Genotipo_Cluster, Genotipo_Spain)
+rm (x, y, Freq, Freq_spain, ID_Genotipo_Spain, Genotipo_Spain, Spain_Genotipo_incluster, Genotipo_incluster, Genotipo_Cluster, Genotipo_incluster_allfreq)
