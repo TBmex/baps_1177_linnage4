@@ -5,7 +5,7 @@ library(dplyr)
 # Data cambiamos variables valor de X dependiendo lo que quiero obtener
 x <- Fastbaps_lvl2
 y <- Fastbaps_lvl2$Genotipo
-    
+
 # Obtenemos tabla de frecuencias
 #cbind( Freq=table(x), Cumul=cumsum(table(x)), relative=prop.table(table(x)))
 Freq <- cbind( Freq=table(y))
@@ -48,6 +48,10 @@ Frecuencias <- cbind(Frecuencias, Spain_incluster_x = c(((Frecuencias$Spain_incl
 Frecuencias <- cbind(Frecuencias, Total_incluster = Genotipo_incluster_allfreq$Transmicion)
 Frecuencias <- cbind(Frecuencias, Spain_incluster_xx = c(((Frecuencias$Spain_incluster)*1) / (Frecuencias$Total_incluster))*100)
 Frecuencias <- round (Frecuencias, 2)
+
+# Adecuamos columnas
+names(Frecuencias) = c("Genotipo","N","Sp","No_sp","Sp_%","Sp_incluster","Sp_nocluster","Sp_incluster_%","N_incluster","N_sp_incluster_%")
+
 
 # Creamso csvs
 write.csv(Frecuencias, "Frecuencias")
