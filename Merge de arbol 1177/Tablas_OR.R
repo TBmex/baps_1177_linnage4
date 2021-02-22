@@ -1,6 +1,6 @@
 #Adecuamos a tabla de Mariana
 ## Libreria
-library(dplyr)
+library(tidyverse)
 
 #Tabla_Mariana <- Frecuencias[,c(1,9,2,6)]
 #Sp_in_spcluster_NA
