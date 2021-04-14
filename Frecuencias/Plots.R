@@ -20,7 +20,7 @@ ggplot(Frecuencias, aes(x=N_sp_incluster_x, y=extranjeros_totaldecasos_x, label 
     ylab("extranjeros_totaldecasos_x") + xlab("spanish in cluster/clustered") + 
     ggtitle("") + 
     theme(plot.title=element_text(hjust = 0.5, size = 12)) + 
-    geom_text(vjust = c(-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-3,-2,-1,-1,-1), hjust = c(0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5), size = 3)
+    geom_text(vjust = c(-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-3,-2,-1,-1,-1), hjust = c(0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5), size = 3) +
   theme(axis.text=element_text(size=11),axis.title.x = element_text (size=14, margin = margin(t = 8, r = 0, b = 0, l = 0)),axis.title.y = element_text(size=14, margin = margin(t = 0, r = 5, b = 0, l = 0 )))
 
 ##  Subset: Grafico de españoles en cluster/casos vs extranjeros / total de casos en el genotipo
@@ -29,6 +29,11 @@ ggplot(N_mayor_20_Sp_x_mayor_0.5, aes(x=N_sp_incluster_x, y=extranjeros_totaldec
     ylab("extranjeros_totaldecasos_x") + xlab("spanish in cluster/clustered") + 
     ggtitle("") + 
     theme(plot.title=element_text(hjust = 0.5, size = 12)) + 
-    geom_text(vjust = c(-1,-1,-1,-1,-1,-1,-1,-1), hjust = c(0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5), size = 3)
+    geom_text(vjust = c(-1,-1,-1,-1,-1,-1,-1,-1), hjust = c(0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5), size = 3) +
   theme(axis.text=element_text(size=11),axis.title.x = element_text (size=14, margin = margin(t = 8, r = 0, b = 0, l = 0)),axis.title.y = element_text(size=14, margin = margin(t = 0, r = 5, b = 0, l = 0 )))
-  
+
+## Tabla de reprentacion de grafico
+Frecuencias %>% select(Genotipo, N_sp_incluster_x, extranjeros_totaldecasos_x)
+
+
+

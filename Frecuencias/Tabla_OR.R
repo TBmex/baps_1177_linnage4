@@ -34,7 +34,7 @@ rownames(matrix_genotipos) <- Filas
 # luego de la matriz se hace el fisher, que puedo hacer a 2 colas o solo a greater
 # Como ves el odd.ratio es mayor a 1, pero además de los valores originales surge que hay más casos en cluster de españoles para el B3 que para el B8, entonces se puede probar la opción de una cola "greater"
 
-Gen_RefGen <- matrix_genotipos[c(8,1),]
+Gen_RefGen <- matrix_genotipos[c(1,2),]
 fisher.test(Gen_RefGen)
 fisher.test(Gen_RefGen, alternative = "greater")
 
@@ -44,12 +44,28 @@ fisher.test(Gen_RefGen, alternative = "greater")
 
 Transmission_in_Spanish_ref1 <- Transmission_in_Spanish %>% 
   mutate(pvalue_two_sided = c("reference", 0.1505, 0.01981, 0.0002373, 0.002881, 3.598e-06 ,0.007618, 0.2912 ), 
-         pvalue_one_sided = c("reference", 0.0925, 0.01417, 0.0002205, 0.002288, 1.922e-06 ,0.006622, 0.2912),
-         Baps_I = c("BAPS_03", "BAPS_03", "BAPS_08", "BAPS_06", "BAPS_07", "BAPS_09", "BAPS_11", "BAPS_02"))
+         pvalue_one_sided = c("reference", 0.0925, 0.01417, 0.0002205, 0.002288, 1.922e-06 ,0.006622, 0.2912))
+#         Baps_I = c("BAPS_03", "BAPS_03", "BAPS_08", "BAPS_06", "BAPS_07", "BAPS_09", "BAPS_11", "BAPS_02"))
 
-#Transmission_in_Spanish_ref2 <- Transmission_in_Spanish %>% 
-#  mutate(pvalue_two_sided = c( 0.1505, "reference", 0.148, 0.005309 , 0.05113, 4.389e-05, 0.1071, 0.68 ), 
-#         pvalue_one_sided = c(0.9613 , "reference", 0.1054, 0.003248, 0.03055, 3.384e-05, 0.06191, 0.5436 ))
+Transmission_in_Spanish_ref2 <- Transmission_in_Spanish %>% 
+  mutate(pvalue_two_sided = c( 0.1505, "reference", 0.148, 0.005309 , 0.05113, 4.389e-05, 0.1071, 0.68 ), 
+         pvalue_one_sided = c(0.9613 , "reference", 0.1054, 0.003248, 0.03055, 3.384e-05, 0.06191, 0.5436 ))
+
+Transmission_in_Spanish_ref2 <- Transmission_in_Spanish %>% 
+  mutate(odds_ratio = c(0.5025809, "reference", 1.948032, 3.453093, 2.149229, 3.799045, 2.113949, 1.237771),
+         confidence_interval = c(c("0.1715204 - 1.3009214"), 
+                                 "reference", 
+                                 c("0.7147408 - 5.0943563"), 
+                                 c("1.386008 - 8.653600"), 
+                                 c("0.9675976 - 4.7445942"), 
+                                 c("1.909062 - 7.693768"), 
+                                 c("0.8299386 - 5.2497030"), 
+                                 c("0.1154588 - 7.4874079")),
+         pvalue_two_sided = c( 0.1505, "reference", 0.148, 0.005309 , 0.05113, 4.389e-05, 0.1071, 0.68 ),
+         pvalue_one_sided = c(0.9613 , "reference", 0.1054, 0.003248, 0.03055, 3.384e-05, 0.06191, 0.5436))
+
+##Creamos csv
+write.csv(Transmission_in_Spanish_ref2, "Transmission_in_Spanish_ref2")
 
 #Transmission_in_Spanish_ref15 <- Transmission_in_Spanish %>% 
 #  mutate(pvalue_two_sided = c( 0.2912, 0.68, 1, 0.426, 0.6993, 0.2655, 0.6925, "reference"), 
