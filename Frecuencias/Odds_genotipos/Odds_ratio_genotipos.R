@@ -14,12 +14,8 @@ Gen_9 <- filter(ID_Genotipo_Spain_Cluster, Genotipo == 9)
 Variables_EPI <- select(x1, Sample, Sexo, Alcoholismo:Marginado.a, Transeunte:Residencia.Ancianos, Phylogeny)
 Variables_EPI <-rename(Variables_EPI, ID = Sample)
 
-# Hacemos joins
+# Hacemos joins, estas tablas eran para observar variables epidemiologicas asociadas a los genotipos pero no habia nada. 
 
 Tablagen2 <- Gen_2 %>% left_join(Variables_EPI)
 Tablagen5 <- Gen_5 %>% left_join(Variables_EPI)
-Tablagen7 <- Gen_7 %>% left_join(Variables_EPI)
 Tablagen8 <- Gen_8 %>% left_join(Variables_EPI)
-Tablagen9 <- Gen_9 %>% left_join(Variables_EPI)
-
-

@@ -1,0 +1,4 @@
+"","Genotipos","Spanish_cluster_cases","NO_Spanish_cluster_cases","odds_ratio","conf.low","conf.high","pvalue"
+"1","Genotipos_Españoles",99,179,"2.0669149107044","1.40310883717431","3.06122956188747","0.000131597669635522"
+"2","Genotipos_mixtos",62,232,"reference","reference","reference","reference"
+"3","Genotipos_NO_Españoles",0,28,NA,NA,NA,NA

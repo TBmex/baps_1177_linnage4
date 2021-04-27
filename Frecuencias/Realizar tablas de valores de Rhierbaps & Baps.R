@@ -63,10 +63,14 @@ Frecuencias <- cbind(Frecuencias, extranjeros_totaldecasos_x = c(((Frecuencias$N
 
 # Spanish cluster cases: number of cases in clusters composed exclusively by Spanish
 Calculando = c(7, 25, 15, 10, 15, 4, 18, 35, 12, 15, 0, 0, 0, 3, 2, 0)
+Calculando2 = c(2, 20, 10, 4, 0, 11, 0, 8, 2, 9, 8, 0, 0, 3, 0, 5)
 Frecuencias <- cbind(Frecuencias, Spanish_cluster_cases = Calculando)
+Frecuencias <- cbind(Frecuencias, Foreign_cluster_cases = Calculando2)
 
 # Cluster cases - Spanish cluster cases
 Frecuencias <- cbind(Frecuencias, NClustercasesSpanishclustercases = c(Frecuencias$N_incluster - Frecuencias$Spanish_cluster_cases))
+Frecuencias <- cbind(Frecuencias, NClustercasesSpanishclustercases = c(Frecuencias$N_incluster - Frecuencias$Spanish_cluster_cases))
+
 
 # Redondeamos
 Frecuencias <- round (Frecuencias, 4)
